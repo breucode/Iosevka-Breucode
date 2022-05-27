@@ -1,0 +1,110 @@
+[collectPlans.iosevka-breucode]
+from = ["iosevka-breucode", "iosevka-breucode-term"]
+
+[buildPlans.iosevka-breucode]
+family = "Iosevka Breucode"
+spacing = "normal"
+serifs = "slab"
+no-cv-ss = true
+
+  [buildPlans.iosevka-breucode.variants]
+  inherits = "ss15"
+
+  [buildPlans.iosevka-breucode.ligations]
+  inherits = "dlig"
+
+[buildPlans.iosevka-breucode.weights.light]
+shape = 300
+menu = 300
+css = 300
+
+[buildPlans.iosevka-breucode.weights.regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.iosevka-breucode.weights.medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.iosevka-breucode.weights.semibold]
+shape = 600
+menu = 600
+css = 600
+
+[buildPlans.iosevka-breucode.weights.bold]
+shape = 700
+menu = 700
+css = 700
+
+[buildPlans.iosevka-breucode.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.iosevka-breucode.slopes.upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.iosevka-breucode.slopes.italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+[buildPlans.iosevka-breucode-term]
+family = "Iosevka Breucode Term"
+spacing = "term"
+serifs = "slab"
+no-cv-ss = true
+
+  [buildPlans.iosevka-breucode-term.variants]
+  inherits = "ss15"
+
+  [buildPlans.iosevka-breucode-term.ligations]
+  inherits = "dlig"
+
+[buildPlans.iosevka-breucode-term.weights.light]
+shape = 300
+menu = 300
+css = 300
+
+[buildPlans.iosevka-breucode-term.weights.regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.iosevka-breucode-term.weights.medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.iosevka-breucode-term.weights.semibold]
+shape = 600
+menu = 600
+css = 600
+
+[buildPlans.iosevka-breucode-term.weights.bold]
+shape = 700
+menu = 700
+css = 700
+
+[buildPlans.iosevka-breucode-term.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.iosevka-breucode-term.slopes.upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.iosevka-breucode-term.slopes.italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"

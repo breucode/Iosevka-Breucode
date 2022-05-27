@@ -1,0 +1,36 @@
+on:
+  push:
+    tags:
+      - "**"
+
+name: Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - id: get_version
+        uses: battila7/get-version-action@v2
+      - name: Clone Iosevka
+        run: git clone --branch "$VERSION" --depth 1 https://github.com/be5invis/Iosevka.git
+        env:
+          VERSION: ${{ steps.get_version.outputs.version }}
+      - name: Copy build plan
+        run: cp private-build-plans.toml Iosevka/
+      - name: Prepare build
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ttfautohint
+      - name: Build
+        run: |
+          cd Iosevka
+          npm install
+          npm run build -- super-ttc::iosevka-breucode
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "Iosevka/dist/.super-ttc/iosevka-breucode.ttc"
+          token: ${{ secrets.GITHUB_TOKEN }}
