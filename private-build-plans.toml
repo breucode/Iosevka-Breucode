@@ -77,7 +77,7 @@ serifs = "slab"
 no-cv-ss = true
 
   [buildPlans.iosevka-breucode-term.variants]
-  inherits = "iosevka-breucode"
+  inherits = "buildPlans.iosevka-breucode"
 
   [buildPlans.iosevka-breucode-term.ligations]
   inherits = "dlig"
