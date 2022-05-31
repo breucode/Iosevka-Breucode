@@ -11,15 +11,17 @@ no-cv-ss = true
   inherits = "ss15"
 
     [buildPlans.iosevka-breucode.variants.design]
+    m = "short-leg"
+    w = "straight"
     eszet = "sulzbacher"
     at = "fourfold"
 
     [buildPlans.iosevka-breucode.variants.italic]
-    eszet = "sulzbacher-descending"
+    eszet = "sulzbacher-tailed"
 
   [buildPlans.iosevka-breucode.ligations]
   inherits = "dlig"
-  enables = ["connected-hyphen-as-solid-line"]
+  enables = ["eqeqeq", "exeqeq"]
 
   [buildPlans.iosevka-breucode.weights.light]
   shape = 300
@@ -79,7 +81,6 @@ no-cv-ss = true
 
   [buildPlans.iosevka-breucode-term.ligations]
   inherits = "dlig"
-  enables = ["connected-hyphen-as-solid-line"]
 
   [buildPlans.iosevka-breucode-term.weights.light]
   shape = 300
