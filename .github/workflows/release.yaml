@@ -25,8 +25,8 @@ jobs:
         run: cp private-build-plans.toml Iosevka/
       - name: Prepare build
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y ttfautohint
+          sudo apt-get update -y -qq
+          sudo apt-get install -y -qq ttfautohint
       - name: Build
         run: |
           cd Iosevka
